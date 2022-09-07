@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock title %}
+{% block body %}
+
+<div class="container">
+    <h4>Add your Directory </h4>
+
+    <form action="/" method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name of the Person</label>
+        <input type="text" class="form-control" name="name" id="name" >
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number of the Person</label>
+        <input type="text" class="form-control" name="phone" id="phone">
+    </div>
+          <button type="submit" class="btn btn-dark">Add</button>
+    </form>
+
+</div>
+
+
+
+
+<div class="container my-3" >
+    <h4> Your Directory </h4>
+
+    <table class="table">
+
+    <thead>
+    <tr>
+      <th scope="col">Sr.No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Date and Time</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+
+        <tbody>
+        {% for cols in col %}
+        <tr>
+            <td>{{col[cols]["sr_no"]}}</td>
+            <td>{{col[cols]["Name"]}}</td>
+            <td>{{col[cols]["Ph_no"]}}</td>
+            <td>{{col[cols]["date_time"]}}
+            <td>
+                <a href="/delete/{{cols}}" type="button" class="btn btn-outline-dark">Delete</a>
+                <a href="/update/{{cols}}" type="button" class="btn btn-outline-dark" >Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock body %}
