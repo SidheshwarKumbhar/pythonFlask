@@ -7,26 +7,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossorigin="anonymous">
+    <style>
+        .bg{
+     <!--   background-image: url("https://www.pcs.udel.edu/wp-content/uploads/2020/05/fundamentals-social-media-web.jpg");-->
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        <!-- background-size: cover; -->
+        border-radius:20px;
+        }
+        nav{
+        background-image: url("https://www.studyrama.com/sites/default/files/metier/2022-07/arton92553.png");
+        border-radius:20px;
+        }
+
+    </style>
+
   </head>
   <body>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"><h2>My Phone Directory</h2></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand" ><h2>My Phone Directory</h2></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">{% block title %} {% endblock title %}</a>
-          </li>
+              <a class="nav-link active" aria-current="page" href="/">{% block title %} {% endblock title %}</a>
+              </li>
           </ul>
-          <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
       </div>
     </div>
   </nav>

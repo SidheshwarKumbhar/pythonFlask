@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-{% block title %}Update Page{% endblock title %}
-
-
+{% block title %}
+Update Page
+{% endblock title %}
 {% block body %}
 
-<div class="container">
+<div class="container bg">
     <h4>Update Contact </h4>
     <form action="/do_update/" method="POST">
         <div class="mb-3">
@@ -18,7 +18,6 @@
         <div class="mb-3">
             <input type="hidden" class="form-control" name="sr_no" id="sr_no" value={{srno}}>
         </div>
-
         <button type="submit" class="btn btn-dark">Update</button>
     </form>
 </div>
